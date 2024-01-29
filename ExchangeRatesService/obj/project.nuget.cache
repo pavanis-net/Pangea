@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "q149V4c6LY5EcJtXscyJ9w/IZdo7pTJx3vjlOrCbSEscP+M1pSuXm5LUZ9mnXQ5HyFFPzejAtXDLev82C1ifqw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pavani.sanam\\AppSource\\ExchangeRates\\ExchangeRatesService\\Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pavani.sanam\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\pavani.sanam\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
