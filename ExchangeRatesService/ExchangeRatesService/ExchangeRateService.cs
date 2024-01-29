@@ -45,7 +45,7 @@ namespace Service.ExchangeRatesService
 
         private decimal GetFlatRateByCountryCode(string countryCode)
         {
-            switch (countryCode)
+             switch (currencyCode.ToUpper())
             {
                 case "MEX":
                     return 0.024m;
