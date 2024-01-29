@@ -19,30 +19,12 @@ namespace Repository.ExchangeRatesRepository
                 ExchangeRates = new List<ExchangeRate>
                 {
                     new ExchangeRate
-                    {
-                        Country = "Mexico",
-                        CountryCode = "MEX",
-                        Currency = "MXN",
-                        PaymentMethod = "debit",
-                        DeliveryMethod = "cash",
-                        Rate = 16.78m,
-                        AcquiredDate = DateTime.Parse("2023-07-24T05:00:00.000Z")
-                    },
+                    {CurrencyCode = "MXN", PaymentMethod = "debit", DeliveryMethod = "cash", Rate = 16.78m, AcquiredDate = DateTime.Parse("2023-07-24")},
                    new ExchangeRate
-                    {
-                        Country = "Mexico",
-                        CountryCode = "MEX",
-                        Currency = "MXN",
-                        PaymentMethod = "debit",
-                        DeliveryMethod = "cash",
-                        Rate = 15.78m,
-                        AcquiredDate = DateTime.Parse("2023-06-24" )
-                    },
+                    {CurrencyCode = "MXN", PaymentMethod = "debit", DeliveryMethod = "cash", Rate = 15.78m, AcquiredDate = DateTime.Parse("2023-06-24")},
                    new ExchangeRate
-                    {
-                        Country = "India",
-                        CountryCode = "IND",
-                        Currency = "RS",
+                    {             
+                        CurrencyCode = "INR",
                         PaymentMethod = "debit",
                         DeliveryMethod = "cash",
                         Rate = 15.78m,
@@ -57,9 +39,8 @@ namespace Repository.ExchangeRatesRepository
                 {
                     new ExchangeRate
                     {
-                        Country = "Philippines",
-                        CountryCode = "PHL",
-                        Currency = "PHP",
+                       
+                        CurrencyCode = "PHP",
                         PaymentMethod = "debit",
                         DeliveryMethod = "cash",
                         Rate = 16.83m,
@@ -67,9 +48,7 @@ namespace Repository.ExchangeRatesRepository
                     },
                     new ExchangeRate
                     {
-                        Country = "Mexico",
-                        CountryCode = "MEX",
-                        Currency = "MXN",
+                        CurrencyCode = "MXN",
                         PaymentMethod = "debit",
                         DeliveryMethod = "cash",
                         Rate = 15.78m,

@@ -20,7 +20,7 @@ namespace Service.ExchangeRatesService
             foreach (var partnerExchangeRate in partnerExchangeRates)
             {
                 var filteredRates = partnerExchangeRate.ExchangeRates
-                    .Where(rate => rate.CountryCode.ToUpper() == countryCode.ToUpper() || rate.Country.ToUpper() == countryCode.ToUpper())
+                    .Where(rate => GetCountryCodeByCurrencyCode( rate.CurrencyCode.ToUpper()) == countryCode.ToUpper() )
                     .OrderByDescending(rate => rate.AcquiredDate)
                     .FirstOrDefault();
 
@@ -30,10 +30,10 @@ namespace Service.ExchangeRatesService
                     var adjustedRate = Math.Round(filteredRates.Rate + GetFlatRateByCountryCode(countryCode), 2);
                     pangeaxchangeRates.Add(new ExchangeRateResponse
                     {
-                        Country = filteredRates.Country,
-                        CurrencyCode = filteredRates.Currency,
-                        CountryCode = filteredRates.CountryCode,
-                        AdjustedRate = adjustedRate,
+
+                        CountryCode = GetCountryCodeByCurrencyCode( filteredRates.CurrencyCode),
+                        CurrencyCode = filteredRates.CurrencyCode,
+                        PangeaRate = adjustedRate,
                         PaymentMethod = filteredRates.PaymentMethod,
                         DeliveryMethod = filteredRates.DeliveryMethod
                     });
@@ -45,8 +45,6 @@ namespace Service.ExchangeRatesService
 
         private decimal GetFlatRateByCountryCode(string countryCode)
         {
-            // Implement a method to return the flat rate based on the provided countryCode
-            // You can use a dictionary or switch statement for this purpose
             switch (countryCode)
             {
                 case "MEX":
@@ -57,9 +55,28 @@ namespace Service.ExchangeRatesService
                     return 0.056m;
                 case "IND":
                     return 3.213m;
-                // Add more country rates as needed
+              
                 default:
-                    return 0.0m; // Default rate if the country code is not found
+                    return 0.0m; 
+            }
+        }
+
+        private string GetCountryCodeByCurrencyCode(string currencyCode)
+        {
+        
+            switch (currencyCode)
+            {
+                case "MXN":
+                    return "MEX";
+                case "PHP":
+                    return "PHL";
+                case "GTM":
+                    return "GTQ";
+                case "IND":
+                    return "INR";
+               
+                default:
+                    return "null"; 
             }
         }
 

@@ -8,10 +8,10 @@ namespace Service.ExchangeRatesService
 {
     public class ExchangeRateResponse
     {
-        public string Country { get; set; }
+        
         public string CurrencyCode { get; set; }
         public string CountryCode { get; set; }
-        public decimal AdjustedRate { get; set; }
+        public decimal PangeaRate { get; set; }
         public string PaymentMethod { get; set; }
         public string DeliveryMethod { get; set; }
     }
