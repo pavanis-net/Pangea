@@ -42,7 +42,7 @@ namespace Service.ExchangeRatesService
 
             return pangeaxchangeRates;
         }
-
+//I would like to get these values from DB or using an API call. 
         private decimal GetFlatRateByCountryCode(string countryCode)
         {
              switch (currencyCode.ToUpper())
@@ -60,7 +60,7 @@ namespace Service.ExchangeRatesService
                     return 0.0m; 
             }
         }
-
+//If time permits I would have make utilized .resx files, enums, or db to retrieve country codes.
         private string GetCountryCodeByCurrencyCode(string currencyCode)
         {
         
